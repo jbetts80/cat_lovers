@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
-  _HomeState call({String? catImage, dynamic isLoading = false}) {
+  _HomeState call({Uint8List? catImage, dynamic isLoading = false}) {
     return _HomeState(
       catImage: catImage,
       isLoading: isLoading,
@@ -31,7 +31,7 @@ const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
 mixin _$HomeState {
-  String? get catImage => throw _privateConstructorUsedError;
+  Uint8List? get catImage => throw _privateConstructorUsedError;
   dynamic get isLoading => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ mixin _$HomeState {
 abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res>;
-  $Res call({String? catImage, dynamic isLoading});
+  $Res call({Uint8List? catImage, dynamic isLoading});
 }
 
 /// @nodoc
@@ -63,7 +63,7 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
       catImage: catImage == freezed
           ? _value.catImage
           : catImage // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Uint8List?,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -78,7 +78,7 @@ abstract class _$HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
           _HomeState value, $Res Function(_HomeState) then) =
       __$HomeStateCopyWithImpl<$Res>;
   @override
-  $Res call({String? catImage, dynamic isLoading});
+  $Res call({Uint8List? catImage, dynamic isLoading});
 }
 
 /// @nodoc
@@ -99,7 +99,7 @@ class __$HomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
       catImage: catImage == freezed
           ? _value.catImage
           : catImage // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Uint8List?,
       isLoading: isLoading == freezed ? _value.isLoading : isLoading,
     ));
   }
@@ -111,7 +111,7 @@ class _$_HomeState implements _HomeState {
   const _$_HomeState({this.catImage, this.isLoading = false});
 
   @override
-  final String? catImage;
+  final Uint8List? catImage;
   @JsonKey()
   @override
   final dynamic isLoading;
@@ -143,11 +143,11 @@ class _$_HomeState implements _HomeState {
 }
 
 abstract class _HomeState implements HomeState {
-  const factory _HomeState({String? catImage, dynamic isLoading}) =
+  const factory _HomeState({Uint8List? catImage, dynamic isLoading}) =
       _$_HomeState;
 
   @override
-  String? get catImage;
+  Uint8List? get catImage;
   @override
   dynamic get isLoading;
   @override

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
+import 'dart:typed_data';
 
 import 'package:bloc/bloc.dart';
 import 'package:cataas/domain/use_cases/home_use_case.dart';
@@ -19,6 +20,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   FutureOr<void> _loadImage(_ImageLoaded event, Emitter<HomeState> emit) async {
     emit(state.copyWith(isLoading: true));
+    // TODO: Implement the loading widget on the view
     try {
       final catImage = await _homeUseCase.fetchCatGif();
       emit(state.copyWith(isLoading: false, catImage: catImage));

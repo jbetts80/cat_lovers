@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 abstract class CatsRepository {
-  Future<String> fetchCatGif();
+  Future<Uint8List> fetchCatGif();
 }
