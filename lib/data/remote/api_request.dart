@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+
 class ApiRequest {
   ApiRequest({
     required this.url,
@@ -5,6 +7,7 @@ class ApiRequest {
     this.query,
     this.headers,
     this.body,
+    this.responseType,
   });
 
   final String url;
@@ -12,6 +15,7 @@ class ApiRequest {
   final Map<String, dynamic>? query;
   final Map<String, dynamic>? headers;
   final dynamic body;
+  final ResponseType? responseType;
 
   static String getMethod = 'GET';
   static String postMethod = 'POST';

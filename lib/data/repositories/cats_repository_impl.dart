@@ -1,10 +1,10 @@
 import 'dart:typed_data';
 
-import 'package:cataas/domain/models/api_error.dart';
-import 'package:cataas/domain/services/cats_api.dart';
 import 'package:injectable/injectable.dart';
 
+import 'package:cataas/domain/models/api_error.dart';
 import 'package:cataas/domain/repositories/cats_repository.dart';
+import 'package:cataas/domain/services/cats_api.dart';
 
 @Injectable(as: CatsRepository)
 class CatsRepositoryImpl implements CatsRepository {

@@ -1,9 +1,10 @@
 import 'dart:io';
 
+import 'package:dio/dio.dart';
+
 import 'package:cataas/data/remote/api_request.dart';
 import 'package:cataas/data/remote/api_response.dart';
 import 'package:cataas/data/remote/endpoints.dart';
-import 'package:dio/dio.dart';
 
 class Client {
   Client._();
@@ -13,7 +14,7 @@ class Client {
   final dio = Dio(
     BaseOptions(
       baseUrl: Endpoints.baseUrl,
-      headers: Endpoints.headers,
+      headers: Endpoints.gifHeaders,
       connectTimeout: 5000,
       receiveTimeout: 3000,
     ),
@@ -27,7 +28,8 @@ class Client {
         queryParameters: request.query,
         options: Options(
           method: request.method,
-          headers: Endpoints.headers,
+          headers: Endpoints.gifHeaders,
+          responseType: request.responseType,
         ),
       );
       return ApiResponse.success(response.data);
