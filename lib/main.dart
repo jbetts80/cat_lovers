@@ -1,3 +1,4 @@
+import 'package:cataas/presentation/home/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
+        theme: AppTheme.lightTheme,
         title: 'Material App',
         home: Scaffold(
           appBar: AppBar(
