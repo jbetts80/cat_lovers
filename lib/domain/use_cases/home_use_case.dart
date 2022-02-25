@@ -1,8 +1,11 @@
-import 'package:cataas/domain/repositories/cats_repository.dart';
+import 'dart:typed_data';
+
 import 'package:injectable/injectable.dart';
 
+import 'package:cataas/domain/repositories/cats_repository.dart';
+
 abstract class HomeUseCase {
-  Future<String> fetchCatGif();
+  Future<Uint8List> fetchCatGif();
 }
 
 @Injectable(as: HomeUseCase)
@@ -11,5 +14,5 @@ class HomeUseCaseImpl implements HomeUseCase {
   final CatsRepository _catsRepo;
 
   @override
-  Future<String> fetchCatGif() async => await _catsRepo.fetchCatGif();
+  Future<Uint8List> fetchCatGif() => _catsRepo.fetchCatGif();
 }

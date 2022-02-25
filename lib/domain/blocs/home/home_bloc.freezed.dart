@@ -15,148 +15,6 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$HomeStateTearOff {
-  const _$HomeStateTearOff();
-
-  _HomeState call({String? catImage, dynamic isLoading = false}) {
-    return _HomeState(
-      catImage: catImage,
-      isLoading: isLoading,
-    );
-  }
-}
-
-/// @nodoc
-const $HomeState = _$HomeStateTearOff();
-
-/// @nodoc
-mixin _$HomeState {
-  String? get catImage => throw _privateConstructorUsedError;
-  dynamic get isLoading => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $HomeStateCopyWith<HomeState> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res>;
-  $Res call({String? catImage, dynamic isLoading});
-}
-
-/// @nodoc
-class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._value, this._then);
-
-  final HomeState _value;
-  // ignore: unused_field
-  final $Res Function(HomeState) _then;
-
-  @override
-  $Res call({
-    Object? catImage = freezed,
-    Object? isLoading = freezed,
-  }) {
-    return _then(_value.copyWith(
-      catImage: catImage == freezed
-          ? _value.catImage
-          : catImage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isLoading: isLoading == freezed
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ));
-  }
-}
-
-/// @nodoc
-abstract class _$HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
-  factory _$HomeStateCopyWith(
-          _HomeState value, $Res Function(_HomeState) then) =
-      __$HomeStateCopyWithImpl<$Res>;
-  @override
-  $Res call({String? catImage, dynamic isLoading});
-}
-
-/// @nodoc
-class __$HomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements _$HomeStateCopyWith<$Res> {
-  __$HomeStateCopyWithImpl(_HomeState _value, $Res Function(_HomeState) _then)
-      : super(_value, (v) => _then(v as _HomeState));
-
-  @override
-  _HomeState get _value => super._value as _HomeState;
-
-  @override
-  $Res call({
-    Object? catImage = freezed,
-    Object? isLoading = freezed,
-  }) {
-    return _then(_HomeState(
-      catImage: catImage == freezed
-          ? _value.catImage
-          : catImage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isLoading: isLoading == freezed ? _value.isLoading : isLoading,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_HomeState implements _HomeState {
-  const _$_HomeState({this.catImage, this.isLoading = false});
-
-  @override
-  final String? catImage;
-  @JsonKey()
-  @override
-  final dynamic isLoading;
-
-  @override
-  String toString() {
-    return 'HomeState(catImage: $catImage, isLoading: $isLoading)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _HomeState &&
-            const DeepCollectionEquality().equals(other.catImage, catImage) &&
-            const DeepCollectionEquality().equals(other.isLoading, isLoading));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(catImage),
-      const DeepCollectionEquality().hash(isLoading));
-
-  @JsonKey(ignore: true)
-  @override
-  _$HomeStateCopyWith<_HomeState> get copyWith =>
-      __$HomeStateCopyWithImpl<_HomeState>(this, _$identity);
-}
-
-abstract class _HomeState implements HomeState {
-  const factory _HomeState({String? catImage, dynamic isLoading}) =
-      _$_HomeState;
-
-  @override
-  String? get catImage;
-  @override
-  dynamic get isLoading;
-  @override
-  @JsonKey(ignore: true)
-  _$HomeStateCopyWith<_HomeState> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
 class _$HomeEventTearOff {
   const _$HomeEventTearOff();
 
@@ -315,4 +173,146 @@ class _$_ImageLoaded implements _ImageLoaded {
 
 abstract class _ImageLoaded implements HomeEvent {
   const factory _ImageLoaded() = _$_ImageLoaded;
+}
+
+/// @nodoc
+class _$HomeStateTearOff {
+  const _$HomeStateTearOff();
+
+  _HomeState call({Uint8List? catImage, dynamic isLoading = false}) {
+    return _HomeState(
+      catImage: catImage,
+      isLoading: isLoading,
+    );
+  }
+}
+
+/// @nodoc
+const $HomeState = _$HomeStateTearOff();
+
+/// @nodoc
+mixin _$HomeState {
+  Uint8List? get catImage => throw _privateConstructorUsedError;
+  dynamic get isLoading => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $HomeStateCopyWith<HomeState> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $HomeStateCopyWith<$Res> {
+  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
+      _$HomeStateCopyWithImpl<$Res>;
+  $Res call({Uint8List? catImage, dynamic isLoading});
+}
+
+/// @nodoc
+class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
+  _$HomeStateCopyWithImpl(this._value, this._then);
+
+  final HomeState _value;
+  // ignore: unused_field
+  final $Res Function(HomeState) _then;
+
+  @override
+  $Res call({
+    Object? catImage = freezed,
+    Object? isLoading = freezed,
+  }) {
+    return _then(_value.copyWith(
+      catImage: catImage == freezed
+          ? _value.catImage
+          : catImage // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory _$HomeStateCopyWith(
+          _HomeState value, $Res Function(_HomeState) then) =
+      __$HomeStateCopyWithImpl<$Res>;
+  @override
+  $Res call({Uint8List? catImage, dynamic isLoading});
+}
+
+/// @nodoc
+class __$HomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements _$HomeStateCopyWith<$Res> {
+  __$HomeStateCopyWithImpl(_HomeState _value, $Res Function(_HomeState) _then)
+      : super(_value, (v) => _then(v as _HomeState));
+
+  @override
+  _HomeState get _value => super._value as _HomeState;
+
+  @override
+  $Res call({
+    Object? catImage = freezed,
+    Object? isLoading = freezed,
+  }) {
+    return _then(_HomeState(
+      catImage: catImage == freezed
+          ? _value.catImage
+          : catImage // ignore: cast_nullable_to_non_nullable
+              as Uint8List?,
+      isLoading: isLoading == freezed ? _value.isLoading : isLoading,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_HomeState implements _HomeState {
+  const _$_HomeState({this.catImage, this.isLoading = false});
+
+  @override
+  final Uint8List? catImage;
+  @JsonKey()
+  @override
+  final dynamic isLoading;
+
+  @override
+  String toString() {
+    return 'HomeState(catImage: $catImage, isLoading: $isLoading)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _HomeState &&
+            const DeepCollectionEquality().equals(other.catImage, catImage) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(catImage),
+      const DeepCollectionEquality().hash(isLoading));
+
+  @JsonKey(ignore: true)
+  @override
+  _$HomeStateCopyWith<_HomeState> get copyWith =>
+      __$HomeStateCopyWithImpl<_HomeState>(this, _$identity);
+}
+
+abstract class _HomeState implements HomeState {
+  const factory _HomeState({Uint8List? catImage, dynamic isLoading}) =
+      _$_HomeState;
+
+  @override
+  Uint8List? get catImage;
+  @override
+  dynamic get isLoading;
+  @override
+  @JsonKey(ignore: true)
+  _$HomeStateCopyWith<_HomeState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

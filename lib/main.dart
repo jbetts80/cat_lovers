@@ -1,7 +1,8 @@
-import 'package:cataas/data/config/injector.dart';
-import 'package:cataas/presentation/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:cataas/data/config/injector.dart';
+import 'package:cataas/presentation/home/home_screen.dart';
 
 void main() {
   setup();

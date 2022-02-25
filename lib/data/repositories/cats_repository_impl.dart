@@ -1,26 +1,22 @@
-import 'dart:developer';
+import 'dart:typed_data';
 
-import 'package:dio/dio.dart';
-
-import 'package:cataas/data/endpoints.dart';
-import 'package:cataas/domain/repositories/cats_repository.dart';
 import 'package:injectable/injectable.dart';
+
+import 'package:cataas/domain/models/api_error.dart';
+import 'package:cataas/domain/repositories/cats_repository.dart';
+import 'package:cataas/domain/services/cats_api.dart';
 
 @Injectable(as: CatsRepository)
 class CatsRepositoryImpl implements CatsRepository {
+  CatsRepositoryImpl(this._catsApi);
+  final CatsApi _catsApi;
+
   @override
-  Future<String> fetchCatGif() async {
-    // TODO Refactor
-    final response = Dio(
-      BaseOptions(
-        baseUrl: Endpoints.baseUrl,
-        headers: {'Content-Type': 'application/json', 'Accept-Language': 'en'},
-        connectTimeout: 5000,
-        receiveTimeout: 3000,
-      ),
+  Future<Uint8List> fetchCatGif() async {
+    final response = await _catsApi.fetchCatGif();
+    return response.when(
+      success: (catGif) => catGif,
+      failure: (statusCode, message) => throw FetchError(statusCode, message),
     );
-    // TODO: Change the response
-    // Uint8List
-    return 'Image loaded';
   }
 }
