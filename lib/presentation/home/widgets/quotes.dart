@@ -1,3 +1,4 @@
+import 'package:cataas/presentation/home/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -15,7 +16,7 @@ class Quotes extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
-          color: Colors.black.withOpacity(0.5),
+          color: AppColors.black,
         ),
         margin: EdgeInsets.symmetric(horizontal: 10.w),
         padding: EdgeInsets.all(10.r),
@@ -23,7 +24,7 @@ class Quotes extends StatelessWidget {
           'Owners of dogs will have noticed that, if you provide them with food and water and shelter and affection, they will think you are God. Whereas owners of cats are compelled to realize that, if you provide them with food and water and affection, they draw the conclusion that they are God.',
           style: TextStyle(
             height: 1.3,
-            color: Colors.white,
+            color: AppColors.white,
             fontSize: 20.0,
             fontWeight: FontWeight.w500,
           ),

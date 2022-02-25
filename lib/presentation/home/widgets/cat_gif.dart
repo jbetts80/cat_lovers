@@ -1,5 +1,4 @@
-import 'dart:typed_data';
-
+import 'package:cataas/presentation/home/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -10,11 +9,21 @@ class CatGif extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<HomeBloc, HomeState, Uint8List?>(
-      selector: (state) => state.catImage,
-      builder: (context, image) {
-        if (image == null) return const SizedBox.shrink();
-        return Image.memory(image);
+    return BlocBuilder<HomeBloc, HomeState>(
+      builder: (context, state) {
+        return Stack(
+          children: [
+            if (state.catImage == null)
+              Image.asset('assets/png/background_cat.png'),
+            if (state.catImage != null)
+              Center(child: Image.memory(state.catImage!)),
+            if (state.isLoading)
+              const LinearProgressIndicator(
+                color: AppColors.white,
+                backgroundColor: AppColors.brown,
+              ),
+          ],
+        );
       },
     );
   }

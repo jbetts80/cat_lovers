@@ -16,7 +16,7 @@ class Client {
       baseUrl: Endpoints.baseUrl,
       headers: Endpoints.gifHeaders,
       connectTimeout: 5000,
-      receiveTimeout: 3000,
+      receiveTimeout: 5000,
     ),
   );
 

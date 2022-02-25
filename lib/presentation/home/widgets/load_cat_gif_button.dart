@@ -1,3 +1,4 @@
+import 'package:cataas/presentation/home/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,19 +14,21 @@ class LoadCatGifButton extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       heightFactor: 9,
-      child: TextButton(
-        onPressed: () =>
-            context.read<HomeBloc>().add(const HomeEvent.onImageLoaded()),
-        child: const Text(
-          // TODO: Internationalize text
-          'Enjoy a New Cat',
-          style: TextStyle(color: Colors.white),
-        ),
-        style: TextButton.styleFrom(
-          backgroundColor: Colors.deepOrange,
-          padding: const EdgeInsets.all(12.0),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(7),
+      child: BlocSelector<HomeBloc, HomeState, bool>(
+        selector: (state) => state.isLoading,
+        builder: (context, isLoading) => TextButton(
+          onPressed: () {
+            if (!isLoading) {
+              context.read<HomeBloc>().add(const HomeEvent.onImageLoaded());
+            }
+          },
+          // TODO: Internationalize texts
+          child: const Text(
+            'Enjoy a New Cat',
+            style: TextStyle(color: AppColors.white),
+          ),
+          style: TextButton.styleFrom(
+            backgroundColor: isLoading ? AppColors.grey : AppColors.orange,
           ),
         ),
       ),
